@@ -7,9 +7,10 @@ COPY . .
 
 RUN apt-get update \
     && apt-get install -y git python python-pip nmap exiftool \
+    && git submodule update --init --recursive --remote \
     && pip install --no-cache-dir --upgrade -r requirements.txt
     
-ENTRYPOINT ["python","Belati.py"]    
+ENTRYPOINT ["python","Belati.py"]
 
 CMD ["--help"]
 
