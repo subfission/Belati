@@ -55,6 +55,8 @@ class DepCheck(object):
         with open('requirements.txt') as f:
             list_deps = f.read().splitlines()
 
+        # Extra dissapointing method of leveraging internal api for gathering packages.  Aborting this code since it's garbage.
+        return
         pip_list = sorted([(i.key) for i in pip.get_installed_distributions()])
 
         for req_dep in list_deps:
