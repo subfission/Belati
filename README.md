@@ -85,7 +85,7 @@ python Belati.py --help
 
 ## Docker Installation
 
-- Download Dockerfile:
+- Clone project with Dockerfile:
 
   ```bash
   git clone https://github.com/subfission/Belati.git
