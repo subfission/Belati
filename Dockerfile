@@ -12,6 +12,6 @@ RUN apt-get update \
     
 ENTRYPOINT ["python","Belati.py"]
 
-CMD ["--help"]
+CMD [""]
 
 EXPOSE 8000
