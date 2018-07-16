@@ -7,7 +7,7 @@ COPY . .
 
 RUN apt-get update \
     && apt-get install -y git python python-pip nmap exiftool \
-    && pip install --no-cache-dir --upgrade -r requirements.txt \
+    && pip install --no-cache-dir --upgrade -r requirements.txt
     
 ENTRYPOINT ["python","Belati.py"]    
 
