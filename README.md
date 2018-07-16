@@ -87,25 +87,19 @@ python Belati.py --help
 
 - Download Dockerfile:
 
-```bash
-wget https://raw.githubusercontent.com/aancw/Belati/master/Dockerfile
-```
+  ```bash
+  git clone https://github.com/subfission/Belati.git
+  ```
 
 - Execute the following command to create a Docker image locally:
   ```bash
-  docker build -t belati . #dot
+  cd Belati && docker build -t belati .
   ```
 
-- To create a container from the image, execute:
+- To create an instance container from the image and run, execute:
   ```bash
-  docker run -p 8000:8000 -it belati /bin/bash
+  docker run -p 8000:8000 -it --rm belati
   ```
-
-- Running Belati
-    ```bash
-    belati -h
-    ```
-
 
 For more info, please refer to this guide: https://github.com/espi0n/Dockerfiles/blob/master/Belati/README.md
 
@@ -114,12 +108,12 @@ For more info, please refer to this guide: https://github.com/espi0n/Dockerfiles
 - Ubuntu 16.04 x86_64
 - Arch Linux x86_64
 - CentOS 7
-- Debian Jessie
+- Debian Stretch
 - MacOS
 
 ## Python Requirements
 
-This tool not compatible with Python 3. I need to migrate this later. So use python v2.7 instead!
+This tool not compatible with Python 3 or pip 10. I need to migrate this later. So use python v2.7 instead!
 
 ## Why Need Root Privilege?
 
